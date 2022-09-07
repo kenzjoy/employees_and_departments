@@ -15,9 +15,16 @@ RSpec.describe Department do
 
         it 'has attributes' do
             expect(@customer_service.name).to eq("Customer Service")
+        end
+        
+        it 'starts with no employees' do
             expect(@customer_service.employees).to eq([])
         end
-    
+
+        it 'has no expenses to start' do
+            expect(@customer_service.expenses).to eq 0
+        end
+
     describe '#hire' do
         it 'can add to employees array' do
             @customer_service.hire(@bobbi)
